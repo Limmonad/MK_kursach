@@ -1,0 +1,106 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Основной верхний блок  ---------------------------------------------------------------------------------------------------------
+------------------------------------------------------*/
+.info {
+  background-color: white;
+}
+.container {
+  max-width: 1147px;
+  margin: 0 auto;
+}
+.info__contentTop {
+  padding-top: 150px;
+  text-align: center;
+}
+.info__contentTop_title {
+  margin: 0 0 30px 0;
+  font-size: 36px;
+  font-family: "Tahoma";
+  color: rgb(33, 33, 33);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.info__content_line {
+  height: 2px;
+  width: 64px;
+  background-color: #1ecbc6;
+  margin: 0 auto 30px;
+}
+.info__content_subtitle {
+  font-size: 14px;
+  font-family: "Tahoma";
+  color: rgb(134, 135, 139);
+}
+/* Нижний блок-----------------------------------------------------------
+---------------------------------------------------------------------------------
+----------------------------------------- */
+.activexx {
+  border: 2px solid red;
+}
+.info__contentBot {
+  padding: 100px 0 0 0;
+}
+.info__contentBot_inner {
+  display: flex;
+  justify-content: space-between;
+}
+.info__cintentBot_item {
+  text-align: center;
+  max-width: 330px;
+}
+.info__contentBot_link {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto;
+  border: 2px solid #1ecbc6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-size: 10px;
+  font-family: "FontAwesome";
+  color: #1ecbc6;
+  transition: 0.5s;
+}
+.info__cintentBot_item div:hover {
+  background-color: #1ecbc6;
+  color: white;
+  cursor: pointer;
+}
+.info__contentBot_link1 {
+  font-size: 30px;
+  text-decoration: none;
+  color: grey;
+}
+.info__contentBot_h2 {
+  margin: 30px 0 30px 0;
+  font-size: 20px;
+  font-family: "Tahoma";
+  color: rgb(51, 51, 51);
+  font-weight: 400;
+}
+.info__contentBot_p {
+  font-size: 14px;
+  font-family: "Tahoma";
+  color: rgb(134, 135, 139);
+  line-height: 20px;
+}

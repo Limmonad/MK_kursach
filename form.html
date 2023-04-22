@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>form</title>
+    <script src="js/db.js"></script>
+  </head>
+  <body>
+    <div class="header-menu">
+      <p class="header-menu__navigation-link">
+        <a href="mainmax.html">Возврат на главную страницу</a>
+      </p>
+    </ul>
+  </div>
+    <div class="form-contact">
+      <div class="container">
+        <div class="l"></div>
+        <form
+          action=""
+          class="contact-form"
+          target="_blank"
+        >
+          <ul class="contact-form__list">
+            <h2>Форма обратной связи</h2>
+            <li>
+              <p>
+                Заполните форму ниже, для того чтобы мы смогли выйти с вами на
+                обратную связь
+              </p>
+            </li>
+            <li id="mks">
+              <input
+              id="nams"
+                class="contact-form-link"
+                type="text"
+                name="name"
+                value = ""
+                maxlength="20"
+                placeholder="Введите Имя"
+              />
+              <input
+                class="contact-form-link"
+                type="text"
+                name="surname"
+                placeholder="Введите Фамилию"
+                maxlength="30"
+              id ="surname"
+              />
+            </li>
+            <li>
+              <input
+                class="contact-form-title contact-form-link"
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Введите email"
+                maxlength="50"
+                id ="email"
+              />
+            </li>
+            <li>
+              <input
+                class="contact-form-title contact-form-link"
+                type="text"
+                name="topic"
+                placeholder="Введите тему письма"
+                maxlength="50"
+                id ="topic"
+              />
+            </li>
+            <li>
+              <input
+                class="contact-form-title contact-form-link"
+                type="text"
+                name="name"
+                placeholder="Введите телефон"
+                maxlength="50"
+                id ="telephone"
+              />
+            </li>
+            <li>
+              <input
+                class="contact-form-title contact-form-link"
+                type="date"
+                name="name"
+                maxlength="50"
+                id="date"
+              />
+            </li>
+            <li>
+              <textarea
+                class="contact-form-message contact-form-link"
+                textarea
+                name="message"
+                id="comment"
+                cols="1"
+                rows="1"
+                placeholder="Ваш комментарий"
+              ></textarea>
+            </li>
+            <li>
+              <input
+                class="contact-form-send"
+                type="submit"
+                value="Отправить запрос"
+                id="request"
+              />
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <script src="js/maintscript.js">
+    </script>
+  </body>
+</html>
