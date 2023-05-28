@@ -17,7 +17,6 @@
   </div>
     <div class="form-contact">
       <div class="container">
-        <div class="l"></div>
         <form
           action=""
           class="contact-form"
@@ -31,14 +30,14 @@
                 обратную связь
               </p>
             </li>
-            <li id="mks">
+            <li>
               <input
               id="nams"
                 class="contact-form-link"
                 type="text"
                 name="name"
                 value = ""
-                maxlength="20"
+                maxlength="10"
                 placeholder="Введите Имя"
               />
               <input
@@ -46,7 +45,7 @@
                 type="text"
                 name="surname"
                 placeholder="Введите Фамилию"
-                maxlength="30"
+                maxlength="10"
               id ="surname"
               />
             </li>
@@ -56,9 +55,11 @@
                 type="text"
                 name="email"
                 id="email"
-                placeholder="Введите email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                placeholder="Введите email (example@mail.ru)"
                 maxlength="50"
                 id ="email"
+                required
               />
             </li>
             <li>
@@ -74,14 +75,15 @@
             <li>
               <input
                 class="contact-form-title contact-form-link"
-                type="text"
+                type="tel"
                 name="name"
-                placeholder="Введите телефон"
-                maxlength="50"
+                placeholder="Введите телефон 89997776533"
+                maxlength="11"
                 id ="telephone"
               />
             </li>
             <li>
+              <p>Дата заполнения формы</p>
               <input
                 class="contact-form-title contact-form-link"
                 type="date"
@@ -113,7 +115,6 @@
         </form>
       </div>
     </div>
-    <script src="js/maintscript.js">
-    </script>
+    <script src="js/maintscript.js"> </script>
   </body>
 </html>

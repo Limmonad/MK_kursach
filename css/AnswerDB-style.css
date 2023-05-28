@@ -1,0 +1,52 @@
+#tblGrid {
+  margin: 100px auto;
+}
+body {
+  background-color: #effbfb;
+}
+
+/* Прописал вверх */
+.header-menu {
+  display: flex;
+  justify-content: center;
+}
+.header-menu__logo {
+}
+.header-menu__navigation {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 600px;
+  list-style: none;
+}
+.header-menu__navigation-link {
+  padding-top: 40px;
+  text-align: center;
+}
+.header-menu__navigation-link > a {
+  font-size: 25px;
+  font-family: "Montserrat";
+  color: #353535;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+.header-menu__navigation-link > a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 2px;
+  /* border-bottom: 2px solid #1ecbc6; */
+  margin: 10px auto;
+  transition: 0.4s;
+}
+.header-menu__navigation-link > a:hover:after {
+  content: "";
+  width: 100%;
+  background-color: #1ecbc6;
+}
+.header-menu__navigation-link > a:active {
+  color: #1ecbc6;
+}
+
+/* ----------------------------------------
+--------- */

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/stylemax.css">
+    <link rel="stylesheet" href="css/AnswerDB-style.css">
+  </head>
+  <div class="wrapp">
+    <div class="container">
+        <div class="header-menu">
+          <ul class="header-menu__navigation">
+            <li class="header-menu__navigation-link">
+              <a href="mainmax.html">Возврат на главную страницу</a>
+            </li>
+            <li class="header-menu__navigation-link">
+              <a href="form.html">Возврат к форме</a>
+            </li>
+            <li class="header-menu__navigation-link">
+              <button style="cursor:pointer" class="butn">Очистить форму</button>
+            </li>
+          </ul>
+        </div>
+      <table id="tblGrid" cellpadding="15px" cellspacing="0" border="1">
+        <tr style="background-color: #1ecbc6; color: white; font-size: 18px">
+          <td>name</td>
+          <td>surname</td>
+          <td>email</td>
+          <td>topic</td>
+          <td>telephone</td>
+          <td>comment</td>
+          <td>date</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+    <script src="js/maintscript.js"></script>
+    <script> 
+    let butn = document.querySelector(".butn");
+    function clearTable() {
+  db.transaction(function (tx) {
+    tx.executeSql("DELETE FROM todo");
+  });
+}
+  function getDataFromWebSQL() {
+  db.transaction(function (tx) {
+    tx.executeSql(
+      "SELECT * FROM todo",
+      [],
+      function (tx, result) {
+        let str = "";
+        for (var i = 0; i < result.rows.length; i++) {
+          str += "<tr>";
+          str += "<td>" + result.rows.item(i).nams + "</td>";
+          str += "<td>" + result.rows.item(i).surname + "</td>";
+          str += "<td>" + result.rows.item(i).email + "</td>";
+          str += "<td>" + result.rows.item(i).topic + "</td>";
+          str += "<td>" + result.rows.item(i).telephone + "</td>";
+          str += "<td>" + result.rows.item(i).comment + "</td>";
+          str += "<td>" + result.rows.item(i).date + "</td>";
+          str += "</tr>";
+          document.getElementById("tblGrid").innerHTML += str;
+          str = "";
+        }
+      },
+      null
+    );
+  });
+}
+getDataFromWebSQL();
+butn.addEventListener('click',function() {
+  clearTable();
+getDataFromWebSQL();
+alert("Форма очищена");
+location.reload();
+})
+    </script>
+  </body>
+</html>

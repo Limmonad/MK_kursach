@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Montserrat", sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 }
@@ -47,7 +47,7 @@ textarea {
 }
 input::-ms-clear {
   display: none;
-}
+} */
 button {
   cursor: pointer;
 }
@@ -68,7 +68,7 @@ ul li {
 img {
   vertical-align: top;
 }
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -76,7 +76,7 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
-}
+} */
 
 /* Основной контент--------------------------------------------------------------------------- */
 
@@ -137,13 +137,17 @@ body {
 
 .header-menu {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   position: sticky;
   top: 0;
   margin-bottom: 50px;
 }
+.header-menu__navigation-link {
+  width: 250px;
+}
+
 .header-menu__navigation-link > a {
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Montserrat";
   color: #353535;
   text-transform: uppercase;
@@ -340,4 +344,11 @@ body {
 }
 .contact-form-send:hover {
   cursor: pointer;
+}
+.errorAnswer {
+  display: inline-block;
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  color: red;
 }
